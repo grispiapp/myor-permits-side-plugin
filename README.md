@@ -4,8 +4,8 @@
 
 ```json
 {
-  "title": "Showcase",
-  "src": "https://e6fa-2a02-4e0-2d7d-c8d-5883-39e8-b0d6-c31d.ngrok-free.app/",
+  "title": "KVKK/Pazarlama İzinleri",
+  "src": "https://grispi.app/myor-permits-side-plugin/build/",
   "uiDefinition": {
     "height": 900
   },
@@ -17,10 +17,7 @@
 ### Settings
 
 ```json
-{
-  "bg-color": "orange",
-  "text-color": "white"
-}
+{}
 ```
 
 ## Testing the Application

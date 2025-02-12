@@ -9,7 +9,7 @@ const App = () => {
       <GrispiProvider>
         <PermitsScreen />
       </GrispiProvider>
-      <Toaster />
+      <Toaster position="bottom-center" />
     </StoreProvider>
   );
 };

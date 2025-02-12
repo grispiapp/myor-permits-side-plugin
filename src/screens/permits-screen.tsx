@@ -15,6 +15,7 @@ import { useGrispi } from "@/contexts/grispi-context";
 import { LoadingScreen } from "./loading-screen";
 import { getKvkkPermit, updateKvkkPermit, KvkkResponse } from "@/api/kvkk";
 import toast from "react-hot-toast";
+import { convertPhoneNumber } from "@/lib/utils";
 
 export const PermitsScreen = observer(() => {
   const { loading, bundle } = useGrispi();
@@ -23,10 +24,7 @@ export const PermitsScreen = observer(() => {
   const [isPermitted, setIsPermitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const requesterPhoneNumber = bundle?.context.requester.phone?.replace(
-    "+",
-    ""
-  );
+  const requesterPhoneNumber = bundle?.context.requester.phone;
 
   useEffect(() => {
     if (requesterPhoneNumber) {
@@ -37,9 +35,17 @@ export const PermitsScreen = observer(() => {
 
   const fetchKvkkData = async (phone: string) => {
     if (!bundle?.context.token) return;
+
+    const formattedPhone = convertPhoneNumber(phone);
+
+    if (!formattedPhone) {
+      toast.error("Geçersiz telefon numarası");
+      return;
+    }
+
     setIsLoading(true);
     try {
-      const response = await getKvkkPermit(phone);
+      const response = await getKvkkPermit(formattedPhone);
 
       if (response.status === false) {
         toast.error(response.description, {

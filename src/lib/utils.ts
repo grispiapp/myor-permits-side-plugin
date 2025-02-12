@@ -22,3 +22,15 @@ export function parseJwt(token: string) {
 
   return JSON.parse(jsonPayload) as JwtToken;
 }
+
+export function convertPhoneNumber(input: string) {
+  let digits = input.replace(/\D/g, ""); // Remove all non-digit characters
+  let match = digits.match(/^(\d{1,4})?(\d{10})$/); // Capture area code (optional) and last 10 digits
+
+  if (!match) return null; // Return null if input is invalid
+
+  let areaCode = match[1] && match[1] !== "0" ? match[1] : "90"; // Use provided area code or default to '90'
+  let number = match[2];
+
+  return `${areaCode}${number}`;
+}

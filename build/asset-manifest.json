@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/myor-permits-side-plugin/build/static/css/main.421885da.css",
-    "main.js": "/myor-permits-side-plugin/build/static/js/main.c35b84bd.js",
+    "main.css": "/myor-permits-side-plugin/build/static/css/main.56e3ad97.css",
+    "main.js": "/myor-permits-side-plugin/build/static/js/main.cdf3c466.js",
     "index.html": "/myor-permits-side-plugin/build/index.html",
-    "main.421885da.css.map": "/myor-permits-side-plugin/build/static/css/main.421885da.css.map",
-    "main.c35b84bd.js.map": "/myor-permits-side-plugin/build/static/js/main.c35b84bd.js.map"
+    "main.56e3ad97.css.map": "/myor-permits-side-plugin/build/static/css/main.56e3ad97.css.map",
+    "main.cdf3c466.js.map": "/myor-permits-side-plugin/build/static/js/main.cdf3c466.js.map"
   },
   "entrypoints": [
-    "static/css/main.421885da.css",
-    "static/js/main.c35b84bd.js"
+    "static/css/main.56e3ad97.css",
+    "static/js/main.cdf3c466.js"
   ]
 }
